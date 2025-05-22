@@ -1,0 +1,9 @@
+streamlit==1.45.1
+langchain==0.0.1
+langchain-google==0.0.1  # This should be the correct package for Google Gemini API; replace if different
+google-generativeai==0.0.1  # This is the package for Google's Gemini API, if you use it
+faiss-cpu==1.7.3  # Install FAISS for vector store usage
+pandas==2.2.3
+PyPDF2==1.26.0  # Install PyPDFLoader dependencies
+requests==2.32.3
+tqdm==4.64.0
