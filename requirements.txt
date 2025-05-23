@@ -1,5 +1,6 @@
 streamlit
 langchain
+langchain_community
 langchain_google_genai
 faiss-cpu  # Install FAISS for vector store usage
 pandas
