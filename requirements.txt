@@ -1,8 +1,6 @@
 streamlit
 langchain
-langchain-google  # This should be the correct package for Google Gemini API; replace if different
 langchain_google_genai
-google-generativeai  # This is the package for Google's Gemini API, if you use it
 faiss-cpu  # Install FAISS for vector store usage
 pandas
 PyPDF2  # Install PyPDFLoader dependencies
