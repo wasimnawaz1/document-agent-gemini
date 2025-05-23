@@ -11,7 +11,8 @@ from langchain.chains import RetrievalQA
 from langchain_experimental.tools import PythonREPLTool
 import tempfile
 import os
-import google.generativeai as genai # Optional: for explicit API key configuration if not using env var
+import getpass
+import google.generativeai as genai     # Optional: for explicit API key configuration if not using env var
 
 # --- IMPORTANT: Configure your Google API Key ---
 # Option 1: Set as an environment variable (recommended)
@@ -21,10 +22,9 @@ import google.generativeai as genai # Optional: for explicit API key configurati
 
 # Option 2: Configure directly in the script (less recommended for production)
 # If you haven't set the environment variable, you can uncomment and use the following:
-GOOGLE_API_KEY = "Replace with your actual key"
-genai.configure(api_key=GOOGLE_API_KEY)
-os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
 
+if "GOOGLE_API_KEY" not in os.environ:
+    os.environ["GOOGLE_API_KEY"] = getpass.getpass("Enter your Google AI API key: ")
 
 st.set_page_config(page_title="Document Agent (Gemini)", layout="wide")
 st.title("📄 Document Agent with Gemini: Ask Questions, Analyze, Summarize PDFs")
