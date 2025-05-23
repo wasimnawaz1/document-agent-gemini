@@ -23,8 +23,12 @@ import google.generativeai as genai     # Optional: for explicit API key configu
 # Option 2: Configure directly in the script (less recommended for production)
 # If you haven't set the environment variable, you can uncomment and use the following:
 
-if "GOOGLE_API_KEY" not in os.environ:
-    os.environ["GOOGLE_API_KEY"] = getpass.getpass("Enter your Google AI API key: ")
+GOOGLE_API_KEY = "AIzaSyDE-vIrd7JivACFjMHEj2AA-TvqtWvf4Fw" 
+genai.configure(api_key=GOOGLE_API_KEY)
+os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
+
+#if "GOOGLE_API_KEY" not in os.environ:
+#    os.environ["GOOGLE_API_KEY"] = getpass.getpass("Enter your Google AI API key: ")
 
 st.set_page_config(page_title="Document Agent (Gemini)", layout="wide")
 st.title("📄 Document Agent with Gemini: Ask Questions, Analyze, Summarize PDFs")
