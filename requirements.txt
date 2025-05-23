@@ -3,6 +3,7 @@ langchain
 langchain_community
 langchain_experimental
 langchain_google_genai
+google-generativeai
 faiss-cpu  # Install FAISS for vector store usage
 pandas
 PyPDF2  # Install PyPDFLoader dependencies
